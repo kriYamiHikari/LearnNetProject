@@ -1,4 +1,6 @@
-﻿using Android.App;
+﻿using System.IO;
+using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -37,6 +39,22 @@ namespace App1
                 dialog.SetNegativeButton("Cancel", (o, eventArgs) => { });
                 dialog.SetPositiveButton("Ok", (o, eventArgs) => { });
                 dialog.Show();
+            };
+
+            var loadTextButton = FindViewById<Button>(Resource.Id.loadTextButton);
+            loadTextButton!.Click += async (sender, args) =>
+            {
+                var loadTextView = FindViewById<TextView>(Resource.Id.loadTextView);
+                using var reader = new StreamReader(Assets!.Open("lyric.txt"));
+                var text = await reader.ReadToEndAsync();
+                loadTextView!.Text = text;
+            };
+
+            var viewMusicInfoButton = FindViewById<Button>(Resource.Id.viewMusicInfoButton);
+            viewMusicInfoButton!.Click += (sender, args) =>
+            {
+                var intent = new Intent(this, typeof(MusicInfoActivity));
+                StartActivity(intent);
             };
         }
 
