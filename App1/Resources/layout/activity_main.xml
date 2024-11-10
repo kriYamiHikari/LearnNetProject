@@ -25,23 +25,23 @@
             android:padding="12dp"
             android:id="@+id/linearLayout1">
             <TextView
-                android:text="Hello world!"
+                android:text="@string/test_text"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/testTextView"/>
             <TextView
-                android:text="Count: 0"
+                android:text="@string/main_countNumber_text"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/countNumberView" />
             <TextView
-                android:text="Test Load Text"
+                android:text="@string/main_longTextView_text"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/loadTextView" />
+                android:id="@+id/longTextView" />
         </LinearLayout>
     </ScrollView>
 
@@ -58,25 +58,25 @@
         android:paddingRight="12dp"
         android:paddingLeft="12dp">
         <Button
-            android:text="Click me add count!!"
+            android:text="@string/main_add_count"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:id="@+id/increaseNumberButton" />
         <Button
-            android:text="Show AlertDialog"
+            android:text="@string/main_show_dialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:id="@+id/showAlertDialogButton" />
         <Button
-            android:text="Load text"
+            android:text="@string/main_load_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:id="@+id/loadTextButton" />
         <Button
-            android:text="View music info"
+            android:text="@string/main_view_music_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"

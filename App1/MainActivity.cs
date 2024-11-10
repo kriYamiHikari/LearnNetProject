@@ -11,8 +11,8 @@ using AlertDialog = Android.App.AlertDialog;
 
 namespace App1
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    [Activity(Label = "@string/app_name", Theme = "@android:style/Theme.Material.Light", MainLauncher = true)]
+    public class MainActivity : Activity
     {
         private int _count;
         private bool _clearData;
@@ -24,30 +24,32 @@ namespace App1
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
             var countButton = FindViewById<Button>(Resource.Id.increaseNumberButton);
+            var countNumberView = FindViewById<TextView>(Resource.Id.countNumberView);
+            countNumberView!.Text = Resources!.GetString(Resource.String.main_countNumber_text, _count);
             countButton!.Click += (sender, args) =>
             {
-                var countNumberView = FindViewById<TextView>(Resource.Id.countNumberView);
-                countNumberView!.Text = $"Count: {_count++}";
+                countNumberView!.Text = Resources!.GetString(Resource.String.main_countNumber_text, _count++);
             };
 
             var showAlertButton = FindViewById<Button>(Resource.Id.showAlertDialogButton);
             showAlertButton!.Click += (sender, args) =>
             {
                 var dialog = new AlertDialog.Builder(this);
-                dialog.SetTitle("TestTitle");
-                dialog.SetMessage("Hello world!");
-                dialog.SetNegativeButton("Cancel", (o, eventArgs) => { });
-                dialog.SetPositiveButton("Ok", (o, eventArgs) => { });
+                dialog.SetTitle(Resource.String.test_text);
+                dialog.SetMessage(Resource.String.test_text);
+                dialog.SetNegativeButton(Resource.String.cancel_text, (o, eventArgs) => { });
+                dialog.SetPositiveButton(Resource.String.ok_text, (o, eventArgs) => { });
                 dialog.Show();
             };
 
             var loadTextButton = FindViewById<Button>(Resource.Id.loadTextButton);
+            var longTextView = FindViewById<TextView>(Resource.Id.longTextView);
+            longTextView!.Text = Resources.GetString(Resource.String.main_longTextView_text, "null");
             loadTextButton!.Click += async (sender, args) =>
             {
-                var loadTextView = FindViewById<TextView>(Resource.Id.loadTextView);
                 using var reader = new StreamReader(Assets!.Open("lyric.txt"));
                 var text = await reader.ReadToEndAsync();
-                loadTextView!.Text = text;
+                longTextView!.Text = Resources.GetString(Resource.String.main_longTextView_text, text);
             };
 
             var viewMusicInfoButton = FindViewById<Button>(Resource.Id.viewMusicInfoButton);

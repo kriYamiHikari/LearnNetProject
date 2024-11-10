@@ -1,4 +1,22 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">App1</string>
     <string name="action_settings">Settings</string>
+
+    <string name="test_text">Hello world!</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="ok_text">Ok</string>
+
+    <!--	Main activity textview components text-->
+    <string name="main_countNumber_text">
+		Count: <xliff:g>%1$d</xliff:g>
+	</string>
+    <string name="main_longTextView_text">
+		text: <xliff:g>%1$s</xliff:g>
+	</string>
+    
+    <!--    Main activity buttons text-->
+    <string name="main_add_count">Click me add count!!</string>
+    <string name="main_load_text">Load text</string>
+    <string name="main_show_dialog">Show AlertDialog</string>
+    <string name="main_view_music_info">View music info</string>
 </resources>
