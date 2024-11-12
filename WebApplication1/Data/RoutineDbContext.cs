@@ -16,18 +16,17 @@ namespace WebApplication1.Data
             modelBuilder.Entity<MusicInfo>().Property(x => x.Artist).IsRequired().HasMaxLength(150);
             modelBuilder.Entity<MusicInfo>().Property(x => x.Language).IsRequired().HasMaxLength(50);
             modelBuilder.Entity<MusicInfo>().Property(x => x.Description).HasMaxLength(100);
-            modelBuilder.Entity<MusicInfo>().Property(x => x.ReleaseTime).IsRequired().HasColumnName("release_time");
             modelBuilder.Entity<MusicInfo>().Property(x => x.TransName).HasMaxLength(50);
-            modelBuilder.Entity<MusicInfo>().Property(x => x.Album).HasMaxLength(150);
+            modelBuilder.Entity<MusicInfo>().Property(x => x.Album).HasMaxLength(100);
             modelBuilder.Entity<MusicInfo>().Property(x => x.Gain).IsRequired();
             modelBuilder.Entity<MusicInfo>().Property(x => x.Peak).IsRequired();
             modelBuilder.Entity<MusicInfo>().Property(x => x.Lra).IsRequired();
             modelBuilder.Entity<MusicInfo>().Property(x => x.Bpm).IsRequired();
             modelBuilder.Entity<MusicInfo>().Property(x => x.Interval).IsRequired();
-            modelBuilder.Entity<MusicInfo>().Property(x => x.Company).HasMaxLength(200);
+            modelBuilder.Entity<MusicInfo>().Property(x => x.Company).HasMaxLength(100);
             modelBuilder.Entity<MusicInfo>().Property(x => x.Genre).HasMaxLength(50);
             modelBuilder.Entity<MusicInfo>().Property(x => x.Mid).IsRequired().HasMaxLength(50);
-
+            modelBuilder.Entity<MusicInfo>().Property(x => x.Id).IsRequired();
         }
 
         
