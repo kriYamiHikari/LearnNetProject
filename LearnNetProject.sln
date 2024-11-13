@@ -5,9 +5,11 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1", "App1\App1.csproj", "{496C5EA7-8F2C-4365-9DA4-07B3BAD147F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{0B61D55F-61CC-469E-8BA3-47B56D4C32D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{0B61D55F-61CC-469E-8BA3-47B56D4C32D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{1DF562E2-1574-4F96-92AC-D409513B2806}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{1DF562E2-1574-4F96-92AC-D409513B2806}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedLibrary", "SharedLibrary\SharedLibrary.shproj", "{A7F01C36-34EE-46C7-8D09-1DD5D30DC921}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,5 +37,11 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7571D083-9F65-497C-B212-43F4321676EF}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SharedLibrary\SharedLibrary.projitems*{0b61d55f-61cc-469e-8ba3-47b56d4c32d7}*SharedItemsImports = 5
+		SharedLibrary\SharedLibrary.projitems*{1df562e2-1574-4f96-92ac-d409513b2806}*SharedItemsImports = 5
+		SharedLibrary\SharedLibrary.projitems*{496c5ea7-8f2c-4365-9da4-07b3bad147f0}*SharedItemsImports = 4
+		SharedLibrary\SharedLibrary.projitems*{a7f01c36-34ee-46c7-8d09-1dd5d30dc921}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

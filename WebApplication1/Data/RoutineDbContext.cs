@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using WebApplication1.Entities;
+﻿using Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication1.Data
 {
@@ -8,6 +8,7 @@ namespace WebApplication1.Data
         public RoutineDbContext(DbContextOptions<RoutineDbContext> options) : base(options)
         {
         }
+
         public DbSet<MusicInfo> MusicInfo { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -28,7 +29,5 @@ namespace WebApplication1.Data
             modelBuilder.Entity<MusicInfo>().Property(x => x.Mid).IsRequired().HasMaxLength(50);
             modelBuilder.Entity<MusicInfo>().Property(x => x.Id).IsRequired();
         }
-
-        
     }
 }

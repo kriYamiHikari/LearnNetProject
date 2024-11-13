@@ -1,7 +1,6 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.Entities
+namespace Entities
 {
     public class MusicInfo
     {

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using WebApplication1.Data;
-using WebApplication1.Entities;
 
 namespace WebApplication1.Controllers
 {
@@ -15,7 +15,7 @@ namespace WebApplication1.Controllers
     {
         private readonly ILogger<MusicInfoController> _logger;
         private readonly RoutineDbContext _context;
-        
+
 
         public MusicInfoController(ILogger<MusicInfoController> logger, RoutineDbContext context)
         {
